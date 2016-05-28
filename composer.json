@@ -1,0 +1,15 @@
+{
+    "name": "errorstream/errorstream-monolog",
+    "description": "Monolog Integration with ErrorStream.com",
+    "type": "library",
+    "require": {
+        "errorstream/errorstreamclient": "1.0"
+    },
+    "license": "Apache-2.0",
+    "minimum-stability": "dev",,
+    "autoload": {
+        "psr-4": {
+            "ErrorStream\\ErrorStreamMonologHandler\\": "src/"
+        }
+    }
+}
