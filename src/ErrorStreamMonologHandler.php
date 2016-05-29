@@ -2,6 +2,7 @@
 
 namespace ErrorStream\ErrorStreamMonologHandler;
 use ErrorStream\ErrorStreamClient\ErrorStreamClient;
+use ErrorStream\ErrorStreamClient\ErrorStreamReport;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
 
@@ -38,7 +39,7 @@ class ErrorStreamMonologHandler extends AbstractProcessingHandler
         $report->stack_trace = $record['formatted'];
         $report->severity = $severity;
 
-        $client = ErrorStreamClient();
+        $client = new ErrorStreamClient();
         $client->api_token = $this->api_token;
         $client->project_token = $this->project_token;
         $client->reportException($report);
