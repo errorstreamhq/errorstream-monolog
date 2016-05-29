@@ -42,7 +42,7 @@ class ErrorStreamMonologHandler extends AbstractProcessingHandler
         $client = new ErrorStreamClient();
         $client->api_token = $this->api_token;
         $client->project_token = $this->project_token;
-        $client->reportException($report);
+        $client->report($report);
     }
 
 }
