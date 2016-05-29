@@ -1,7 +1,7 @@
 <?php
 
 namespace ErrorStream\ErrorStreamMonologHandler;
-use ErrorStream\ErrorStreamClient;
+use ErrorStream\ErrorStreamClient\ErrorStreamClient;
 use Monolog\Handler\AbstractProcessingHandler;
 use Monolog\Logger;
 
