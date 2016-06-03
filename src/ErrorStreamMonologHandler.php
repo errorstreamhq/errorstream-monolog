@@ -32,12 +32,16 @@ class ErrorStreamMonologHandler extends AbstractProcessingHandler
         }
 
         $report = new ErrorStreamReport();
-        $report->error_group = $record['formatted'];
+        $report->severity = $severity;
+        $report->error_group = $record['message'];
         $report->line_number = 0;
         $report->file_name = 'Monolog';
         $report->message = $record['formatted'];
-        $report->stack_trace = $record['formatted'];
-        $report->severity = $severity;
+
+        $trace = '';
+        foreach($record['context'] AS $key=>$value)
+            $trace .= "$key: $value<br>";
+        $report->stack_trace = $trace;
 
         $client = new ErrorStreamClient();
         $client->api_token = $this->api_token;
