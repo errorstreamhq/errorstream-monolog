@@ -1,2 +1,2 @@
 # errorstream-monolog
-Monolog integration with ErrorStream.com
+Monolog integration with [Errorstream](https://errorstream.com/)
