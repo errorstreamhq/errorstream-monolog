@@ -38,7 +38,7 @@ class ErrorStreamMonologHandler extends AbstractProcessingHandler
         $report->file_name = 'Monolog';
         $report->message = $record['formatted'];
 
-        $trace = '';
+        $trace = $record['message'] . '<br><br>';
         foreach($record['context'] AS $key=>$value)
             $trace .= "$key: $value<br>";
         $report->stack_trace = $trace;
