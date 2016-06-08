@@ -1,6 +1,8 @@
 {
     "name": "errorstream/errorstream-monolog",
     "description": "Monolog Integration with ErrorStream.com",
+    "keywords": ["log", "logging", "errors", "errorstream"],
+    "homepage": "https://www.errorstream.com",
     "type": "library",
     "require": {
         "errorstream/errorstreamclient": "1.0"
